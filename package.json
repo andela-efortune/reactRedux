@@ -2,7 +2,10 @@
   "name": "reactRedux",
   "version": "1.0.0",
   "description": "A simple react and redux app.",
-  "scripts": {},
+  "scripts": {
+    "prestart": "babel-node tools/startMessage",
+    "start": "babel-node tools/srcServer.js"
+  },
   "author": "Fortune Ekeruo",
   "license": "MIT",
   "dependencies": {
