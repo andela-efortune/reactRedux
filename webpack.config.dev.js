@@ -12,7 +12,7 @@ export default {
   ],
   target: 'web',
   output: {
-    path: _dirname + '/dist', // The physical files are only output for production builds by running `npm run build`.
+    path: __dirname + '/dist', // The physical files are only output for production builds by running `npm run build`.
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -25,7 +25,7 @@ export default {
   ],
   module: {
     loaders: [
-      {test: /\.js$/, include: path.join(_dirname, 'src'), loaders: ['babel'] },
+      {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel'] },
       {test: /(\.css)$/, loaders: ['style', 'css'] },
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
@@ -33,4 +33,4 @@ export default {
       {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'}
     ]
   }
-}
+};
